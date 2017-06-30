@@ -8,7 +8,7 @@ environment:
     - BUILD_TYPE: x64
 
 before_build:
-    - ps: Start-FileDownload 'https://github.com/Pusnow/mecab-ko-msvc/releases/download/release-0.9.2-msvc-2/mecab-ko-msvc-x64.zip'
+    - ps: Start-FileDownload 'https://github.com/Pusnow/mecab-ko-msvc/releases/download/release-0.9.2-msvc-3/mecab-ko-msvc-x64.zip'
     - 7z x mecab-ko-msvc-x64.zip
     - mkdir mecab-ko-dic
 build_script:
