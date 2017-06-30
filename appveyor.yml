@@ -21,14 +21,14 @@ after_build:
 
 
 artifacts: 
-  - path: '*.zip'
+  - path: mecab-ko-dic-msvc.zip
     name: MeCab-KO-Dic-MSVC
 deploy:
   description: 'MeCab-Ko-Dic-MSVC'
   provider: GitHub
   auth_token:
     secure: OmfpZhJdq1DA5Yl/KrpU0VVV6jCM7DQ/8gH7IH1Fld9TtRvnHCTLxJSTXVgsOEmJ
-  artifact: MeCab-KO-MSVC-Dic    
+  artifact: MeCab-KO-Dic-MSVC    
   draft: false
   prerelease: false
   on:
