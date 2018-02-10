@@ -18,14 +18,13 @@ function Get-Cost {
 function Compile {
     Remove-Item .\mecab-ko-dic\*.bin
     Remove-Item .\mecab-ko-dic\*.txt
-    Remove-Item .\mecab-ko-dic\user-*.csv
     & mecab-dict-index.exe -d mecab-ko-dic -o mecab-ko-dic -f UTF-8 -t UTF-8
 
 }
 
 function main {
     Write-Output "generating userdic..."
-
+    Remove-Item .\mecab-ko-dic\user-*.csv
 
     Get-Userdics  | ForEach-Object {
         Get-Cost $_
