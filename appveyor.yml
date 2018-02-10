@@ -20,6 +20,8 @@ after_build:
     - cp %APPVEYOR_BUILD_FOLDER%\*.csv %APPVEYOR_BUILD_FOLDER%\mecab-ko-dic\
     - 7z a mecab-ko-dic-msvc.zip %APPVEYOR_BUILD_FOLDER%\mecabrc
     - 7z a mecab-ko-dic-msvc.zip %APPVEYOR_BUILD_FOLDER%\mecab-ko-dic\
+    - 7z a mecab-ko-dic-msvc.zip %APPVEYOR_BUILD_FOLDER%\tools\
+    - 7z a mecab-ko-dic-msvc.zip %APPVEYOR_BUILD_FOLDER%\user-dic\
 
 
 artifacts: 
