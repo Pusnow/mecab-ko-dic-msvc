@@ -16,8 +16,8 @@ build_script:
 
 after_build:
     - copy dicrc mecab-ko-dic\dicrc
-    - cp %APPVEYOR_BUILD_FOLDER%\*.def %APPVEYOR_BUILD_FOLDER%\mecab-ko-dic\
-    - cp %APPVEYOR_BUILD_FOLDER%\*.csv %APPVEYOR_BUILD_FOLDER%\mecab-ko-dic\
+    - copy %APPVEYOR_BUILD_FOLDER%\*.def %APPVEYOR_BUILD_FOLDER%\mecab-ko-dic\
+    - copy %APPVEYOR_BUILD_FOLDER%\*.csv %APPVEYOR_BUILD_FOLDER%\mecab-ko-dic\
     - 7z a mecab-ko-dic-msvc.zip %APPVEYOR_BUILD_FOLDER%\mecabrc
     - 7z a mecab-ko-dic-msvc.zip %APPVEYOR_BUILD_FOLDER%\mecab-ko-dic\
     - 7z a mecab-ko-dic-msvc.zip %APPVEYOR_BUILD_FOLDER%\tools\
