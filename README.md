@@ -10,6 +10,9 @@ mecab-ko-dic-msvc는 mecab-ko-msvc에서 사용할 수 있는 mecab-ko-dic을 �
 * `C:\mecab` 폴더에 설치했을 경우 `C:\mecab` 폴더에 [최신버전](https://github.com/Pusnow/mecab-ko-dic-msvc/releases/latest)을 다운로드하여 압축을 해제합니다. 
 * `C:\mecab` 폴더안에 `mecab-ko-dic` 폴더와 `mecabrc` 파일이 있으면 성공적으로 설치가 된 것입니다.
 
+## 사용자 사전 추가
+이제 Windows에서도 사용자 사전을 추가할 후 있습니다. 최신 버전을 내려 받으시고 [이 페이지](https://github.com/Pusnow/mecab-ko-dic-msvc/blob/master/user-dic/README.md)를 참고해 주세요.
+
 ## 빌드 정보
 
 * mecab-ko-dic-msvc 는 [Appveyor](https://www.appveyor.com)를 이용합니다.
