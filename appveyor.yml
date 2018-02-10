@@ -13,10 +13,11 @@ before_build:
     - mkdir mecab-ko-dic
 build_script:
     - mecab-dict-index.exe -d . -o mecab-ko-dic -f UTF-8 -t UTF-8
-    - cp %APPVEYOR_BUILD_FOLDER%\*.def %APPVEYOR_BUILD_FOLDER%\mecab-ko-dic\
 
 after_build:
     - copy dicrc mecab-ko-dic\dicrc
+    - cp %APPVEYOR_BUILD_FOLDER%\*.def %APPVEYOR_BUILD_FOLDER%\mecab-ko-dic\
+    - cp %APPVEYOR_BUILD_FOLDER%\*.csv %APPVEYOR_BUILD_FOLDER%\mecab-ko-dic\
     - 7z a mecab-ko-dic-msvc.zip %APPVEYOR_BUILD_FOLDER%\mecabrc
     - 7z a mecab-ko-dic-msvc.zip %APPVEYOR_BUILD_FOLDER%\mecab-ko-dic\
 
