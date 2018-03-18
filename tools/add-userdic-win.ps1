@@ -18,7 +18,7 @@ function Get-Cost {
 function Compile {
     Remove-Item .\mecab-ko-dic\*.bin
     Remove-Item .\mecab-ko-dic\*.txt
-    & mecab-dict-index.exe -d mecab-ko-dic -o mecab-ko-dic -f UTF-8 -t UTF-8
+    & .\mecab-dict-index.exe -d mecab-ko-dic -o mecab-ko-dic -f UTF-8 -t UTF-8
 
 }
 
