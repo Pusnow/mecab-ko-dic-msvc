@@ -27,7 +27,7 @@ mecab-ko-dic-msvc는 mecab-ko-msvc에서 사용할 수 있는 mecab-ko-dic을 �
 
 # mecab-ko-dic 소개
 
-[mecab-ko-dic](https://bitbucket.org/eunjeon/mecab-ko-dic)은 오픈 소스 형태소 분석 엔진인 [MeCab](http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html)을 사용하여, 한국어 형태소 분석을 하기 위한 프로젝트입니다. 말뭉치 학습과 사전 목록 일부는 [21세기 세종계획](http://www.sejong.or.kr/)의 성과물을 사용하였습니다.
+[mecab-ko-dic](https://bitbucket.org/eunjeon/mecab-ko-dic)은 오픈 소스 형태소 분석 엔진인 [MeCab](http://taku910.github.io/mecab/)을 사용하여, 한국어 형태소 분석을 하기 위한 프로젝트입니다. 말뭉치 학습과 사전 목록 일부는 [21세기 세종계획](http://www.sejong.or.kr/)의 성과물을 사용하였습니다.
 
     :::text
     mecab-ko-dic은 21세기 세종계획 모든 현대 말뭉치에서 50문장씩을 추출하여 학습에 이용하였습니다. (총 23,615 문장)
@@ -57,7 +57,7 @@ tar.gz를 압축 해제하시고 일반적인 자유 소프트웨어와 같은 �
 자세한 내용은 다음의 URL을 참조하시기 바랍니다.
 
   - [mecab-ko](https://bitbucket.org/eunjeon/mecab-ko)
-  - [MeCab 홈페이지](http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html)
+  - [MeCab 홈페이지](http://taku910.github.io/mecab/)
 
 ## mecab-ko-dic 다운로드
 
@@ -112,13 +112,13 @@ libmecab.so.2를 찾을 수 없는 에러가 나는 경우, 다음과 같이 할
     은    JX,*,T,은,*,*,*,*
     MeCab    SL,*,*,*,*,*,*,*
     을    JKO,*,T,을,*,*,*,*
-    사용    NNG,*,T,사용,*,*,*,*
+    사용    NNG,행위,T,사용,*,*,*,*
     하    XSV,*,F,하,*,*,*,*
     여    EC,*,F,여,*,*,*,*
     ,    SC,*,*,*,*,*,*,*
     한국어    NNG,*,F,한국어,Compound,*,*,한국/NNG/*+어/NNG/*
     형태소    NNG,*,F,형태소,Compound,*,*,형태/NNG/*+소/NNG/*
-    분석    NNG,*,T,분석,*,*,*,*
+    분석    NNG,행위,T,분석,*,*,*,*
     을    JKO,*,T,을,*,*,*,*
     하    VV,*,F,하,*,*,*,*
     기    ETN,*,F,기,*,*,*,*
@@ -137,4 +137,3 @@ mecab-ko-dic에서 사용하는 사전 형식이나 품사 태그에 대한 정�
 - 형태소 분석기 학습에 사용된 말뭉치(corpus)는 저작권이 있기 때문에 배포가 불가능합니다.
 - 단어 추가 방법은 다음의 URL에서 확인하실 수 있습니다.
     [사용자 사전 추가](final/user-dic/README.md)
-
