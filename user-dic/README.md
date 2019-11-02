@@ -29,7 +29,9 @@
 
 그 외의 품사 추가가 필요한 경우에는 [품사태그표](https://docs.google.com/spreadsheet/ccc?key=0ApcJghR6UMXxdEdURGY2YzIwb3dSZ290RFpSaUkzZ0E&usp=sharing#gid=4) 를 참고하세요.
 
-## 사전 컴파일
+## 사전 빌드
+
+**경고: 이 작업은 사용자 사전의 코스트를 초기화합니다. 코스트를 수정했을 경우 사용자 사전 파일(`user-xxx.csv`)를 백업하고 다음 작업을 시행하십시오.**
 
 Powershell을 이용하여 작업하셔야 합니다. 단축키 `(윈도우키) + R` 을 누르고 `powershell` 을 입력하면 실행 가능합니다.
 
@@ -55,6 +57,17 @@ Powershell을 이용하여 작업하셔야 합니다. 단축키 `(윈도우키) 
     ├── user-person.csv
     ├── user-place.csv
     └── ...
+
+## 사전 컴파일
+
+다음 절차를 통해 사용자 사전 파일을 만들지 않고 사전을 컴파일 할 수 있습니다.
+
+사용자 사전 파일(`user-xxx.csv`)을 수동으로 수정했으면 다음 절차로 변경 내용(코스트 등)을 반영할 수 있습니다.
+
+* `C:\mecab` 경로로 이동합니다.
+* `tools\compile-win.ps1` 스크립트를 실행합니다.
+
+
 
 ## 설치
 설치 과정은 따로 필요 없습니다. 바로 사용하시면 됩니다.
