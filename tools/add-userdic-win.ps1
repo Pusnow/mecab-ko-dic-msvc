@@ -12,7 +12,7 @@ function Get-Userdics {
 
 function Get-Cost {
     $input_dic = $args[0]
-    & $DICT_INDEX -m  "$($DIC_PATH)model.def"     -d $DIC_PATH     -u "$($DIC_PATH)user-$($input_dic)"     -f utf-8     -t utf-8     -a "$($USERDIC_PATH)$($input_dic)"
+    & $DICT_INDEX -m  "$($DIC_PATH)model.def" -d $DIC_PATH -u "$($DIC_PATH)user-$($input_dic)" -f utf-8 -t utf-8 -a "$($USERDIC_PATH)$($input_dic)"
 }
 
 function Compile {
@@ -27,7 +27,7 @@ function main {
     Remove-Item .\mecab-ko-dic\user-*.csv
 
     Get-Userdics  | ForEach-Object {
-        Get-Cost $_
+        Get-Cost $_.Name
     }
 
 
