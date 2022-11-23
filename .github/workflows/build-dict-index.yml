@@ -1,0 +1,35 @@
+name: build-dict-index
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+jobs:
+  build-dict-index:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        arch:
+          - x64
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          lfs: true
+      - name: Setup Mecab-ko-msvc
+        run: |
+          curl -fSL -o 'mecab-ko-msvc-${{ matrix.arch }}.zip'  'https://github.com/Pusnow/mecab-ko-msvc/releases/download/release-0.9.2-msvc-3/mecab-ko-msvc-${{ matrix.arch }}.zip'
+          7z x mecab-ko-msvc-${{ matrix.arch }}.zip
+          mkdir mecab-ko-dic
+      - name: Build dictionary index
+        run: .\mecab-dict-index.exe -d . -o mecab-ko-dic -f UTF-8 -t UTF-8
+      - name: 7z
+        run: |
+          copy dicrc mecab-ko-dic\dicrc
+          copy *.def mecab-ko-dic\
+          copy *.csv mecab-ko-dic\
+          7z a mecab-ko-dic-msvc.zip mecabrc mecab-ko-dic\ tools\ user-dic\
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          path: mecab-ko-dic-msvc.zip
