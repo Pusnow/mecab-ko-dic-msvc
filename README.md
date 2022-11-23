@@ -1,6 +1,6 @@
 # mecab-ko-dic-msvc
 
-[![Build status](https://ci.appveyor.com/api/projects/status/4uatwro89fwwuec7/branch/master?svg=true)](https://ci.appveyor.com/project/Pusnow/mecab-ko-dic-msvc/branch/master)
+[![Build](https://github.com/Pusnow/mecab-ko-dic-msvc/actions/workflows/build-dict-index.yml/badge.svg)](https://github.com/Pusnow/mecab-ko-dic-msvc/actions/workflows/build-dict-index.yml)
 
 mecab-ko-dic-msvc는 mecab-ko-msvc에서 사용할 수 있는 mecab-ko-dic을 빌드하는 프로젝트입니다.
 

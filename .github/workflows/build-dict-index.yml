@@ -1,4 +1,4 @@
-name: build-dict-index
+name: Build
 
 on:
   push:
